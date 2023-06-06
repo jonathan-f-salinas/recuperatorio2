@@ -90,7 +90,7 @@ const createAlumno = (req, res) => {
   
   const existeAlumno = alumnos.find((a) => a.dni == dni);
   if (existeAlumno) {
-    res.status(400).json({ error: 'El alumno ya está registrado' });
+    res.status(400).json({ error: `El alumno con dni: ${dni} ya está registrado` });
     return;
   }
   
