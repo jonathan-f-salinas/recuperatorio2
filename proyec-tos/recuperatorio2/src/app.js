@@ -9,5 +9,5 @@ app.use('/api/alumnos', alumnosRouter)
 app.use('/api/viandas', viandasRouter)
 
 app.listen(PORT, () => {
-    console.log(`Solución del parcial en el puerto ${PORT}`)
+    console.log(`App escuchando en el puerto ${PORT}`)
 })
