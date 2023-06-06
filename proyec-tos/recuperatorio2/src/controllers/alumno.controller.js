@@ -38,46 +38,6 @@ const getAlumnoByDni = (req, res) => {
   
     res.status(200).json({ message: 'alumno actualizado correctamente', alumno });
   }
-/*
-  const createAlumno = (req, res) => {
-    const { dni, nombre,celiaco, edad } = req.body 
-    
-    const dniRegex = /^\d{8}$/
-    if (!dniRegex.test(dni)) {// .test() verifica si una cadena cumple con un patrón definido por una expresión regular
-        console.log(dni)
-      res.status(400).json({ error: `se solicita el ingreso de 8 digitos para el dni ${dni}` })
-      return 0;
-    }
-  
-    const existeAlumno = alumnos.find((a) => a.dni == dni)
-    if (existeAlumno) {
-      res.status(400).json({ error: 'El alumno ya está registrado' })
-      return 0;
-    }
-  
-    const habilitado = true
-    
-
-    const Esceliaco = (celiaco !== undefined) ? celiaco : false;
-  
-    if (edad < 18 || edad > 99) {
-      res.status(400).json({ error: 'la edad ingresada tiene que ser un numero mayor a 18 y menor a 99' })
-      return
-    }else edad=edad
-  
-  
-    const newAlumno = {
-      dni,
-      nombre,
-      habilitado,
-      Esceliaco,
-      edad
-      
-    }
-  
-    alumnos.push(newAlumno)
-    res.status(201).json({ message: 'alumno creado correctamente', alumno: newAlumno })
-  }*/
   
 const createAlumno = (req, res) => {
   const { dni, nombre, celiaco, edad } = req.body;
